@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Beden Kütle Endeksi</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,400italic,700,300italic&subset=latin,latin-ext' rel='stylesheet'
+        type='text/css'>
+    <style>
+        * {
+            border: 0;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            text-transform: capitalize;
+            background: url(assets/images/body.png) no-repeat;
+            background-position: 95% bottom;
+            font-family: "Lato"
+        }
+        
+        .left {
+            float: left;
+            width: 50%;
+            height: 100%;
+        }
+        
+        .left .cont {
+            height: calc(100% - 240px);
+            margin: 120px;
+        }
+        
+        .main-heading {
+            float: left;
+            width: 100%;
+            text-align: left;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .main-heading h1 {
+            color: #000;
+            font-size: 24px;
+            text-transform: uppercase;
+            margin-bottom: 3px;
+        }
+        
+        .main-heading hr:nth-child(2) {
+            display: block;
+            margin: 1px 0px;
+        }
+        
+        .main-heading hr:nth-child(2) {
+            position: absolute;
+            left: 0px;
+        }
+        
+        .main-heading hr:nth-child(2) {
+            margin: 1px auto;
+            width: 100px;
+        }
+        
+        .main-heading hr:nth-child(2) {
+            border-top: 2px solid #5ED9B0;
+        }
+        
+        .main-heading hr:nth-child(3) {
+            float: left;
+        }
+        
+        .main-heading hr:nth-child(3) {
+            position: absolute;
+            left: 0px;
+            margin-top: 4px;
+        }
+        
+        .main-heading hr:nth-child(3) {
+            margin: 0px auto;
+            width: 80px;
+        }
+        
+        .main-heading hr:nth-child(3) {
+            border-top: 1px solid #5ED9B0;
+        }
+        
+        .form {
+            float: left;
+            width: 100%;
+            position: relative;
+            z-index: 999;
+            margin-bottom: 20px;
+        }
+        
+        .form {
+            border: 1px solid #ebebeb;
+            padding: 25px;
+            background: #fff;
+        }
+        
+        .form ul {
+            float: left;
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        .form ul li {
+            list-style: none;
+        }
+        
+        .form li.active .tabs {
+            color: #181818;
+            background: #f7f7f7;
+        }
+        
+        .form .tabs {
+            float: left;
+            padding: 12px 9%;
+            font-size: 15px;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 30px;
+        }
+        
+        .form .tabs {
+            background: #5ED9B0;
+        }
+        
+        .form-group {
+            font-size: 15px;
+            font-weight: bold;
+            text-align: right;
+            float: left;
+            margin-bottom: 20px;
+        }
+        
+        .form-control {
+            box-shadow: 0px 0px 0px transparent;
+            font-size: 14px;
+            width: 86%;
+            float: left;
+            border-radius: 0px;
+            height: 40px;
+            font-weight: normal;
+        }
+        
+        .form-control {
+            display: block;
+            width: 90%;
+            height: 34px;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 0;
+            outline: none;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+            -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        }
+        
+        button {
+            border: 0px solid transparent;
+            padding: 14px 20px 14px 30px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .short-line {
+            color: #fff;
+            position: relative;
+            padding: 13px 25px;
+            font-size: 14px;
+            text-transform: uppercase;
+            display: inline-block;
+            position: relative;
+            z-index: 999;
+            border: 0px solid transparent;
+            font-weight: bold;
+        }
+        
+        .short-line {
+            background: #5ED9B0;
+        }
+        
+        .short-line:before {
+            content: '';
+            position: absolute;
+            transform: skewx(-30deg);
+            -webkit-transform: skewx(-30deg);
+            -moz-transform: skewx(-30deg);
+            -ms-transform: skewx(-30deg);
+            -o-transform: skewx(-30deg);
+            top: 0px;
+            bottom: 0px;
+            right: -19%;
+            width: 3px;
+        }
+        
+        .short-line:before {
+            background: #5ED9B0;
+        }
+        
+        .short-line:after {
+            content: '';
+            position: absolute;
+            transform: skewx(-30deg);
+            -webkit-transform: skewx(-30deg);
+            -moz-transform: skewx(-30deg);
+            -ms-transform: skewx(-30deg);
+            -o-transform: skewx(-30deg);
+            top: 0px;
+            bottom: 0px;
+            right: -15%;
+            width: 70%;
+            z-index: -1;
+        }
+        
+        .short-line:after {
+            background: #5ED9B0;
+        }
+        
+        @media (min-width: 768px) {
+            .form-group {
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="left">
+        <div class="cont">
+            <div class="main-heading">
+                <h1>Beden & Kütle Endeksi</h1>
+                <hr>
+                <hr>
+            </div>
+            <div class="form">
+                <form>
+                    <div class="form-group">
+                        <input type="text" id="kilo" class="form-control" placeholder="Kilonuzu Girin (kg)">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="boy" class="form-control" placeholder="Boyunuzu Girin (cm)">
+                    </div>
+                    <button type="submit" class="short-line" onclick="calculate()">hesapla</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calculate() {
+            var kilo = document.getElementById("kilo").value;
+            var boy = document.getElementById("boy").value / 100;
+
+            var bazal = kilo / (boy * boy);      
+            if ( bazal < 20) {
+                alert("Vücut Kitle Endeksi: " + bazal.toFixed(2) + "\nZayıf");
+            } else if ( bazal > 20 && bazal < 24.9 ) {
+                alert("Vücut Kitle Endeksi: " + bazal.toFixed(2) + "\nNormal");
+            } else if ( bazal > 25 && bazal < 29.9 ) {
+                alert("Vücut Kitle Endeksi: " + bazal.toFixed(2) + "\nHafif şişman");                
+            } else if ( bazal > 30 && bazal < 34.9 ) {
+                alert("Vücut Kitle Endeksi: " + bazal.toFixed(2) + "\nŞişman");                
+            } else if ( bazal > 35 && bazal < 39.9 ) {
+                alert("Vücut Kitle Endeksi: " + bazal.toFixed(2) + "\nSağlık açısından önemli");                
+            } else if ( bazal > 40 && bazal < 49.9 ) {
+                alert("Vücut Kitle Endeksi: " + bazal.toFixed(2) + "\nAşırı şişman");                
+            } else {
+                alert("Vücut Kitle Endeksi: " + bazal.toFixed(2) + "\nMorbid (ölümcül) şişman");
+            }
+        }
+    </script>
+</body>
+
+</html>
